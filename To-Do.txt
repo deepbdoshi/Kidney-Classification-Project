@@ -1,0 +1,6 @@
+Setup and AWS Account
+Create the folder structure
+Create the first commit
+Create the requirements file
+Create the logger module
+And cover the next 30 mins
