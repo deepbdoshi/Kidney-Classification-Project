@@ -8,3 +8,5 @@
 * Environment setup and activation
 * Installing the requirements
 * Adding the venv dir to gitignore
+* Logger functionality in the constructor file to optimize importing the packages
+* Config Box andEnsure Annotations.
