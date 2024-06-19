@@ -1,7 +1,7 @@
-from cnnClassifier.constants import *
+from kidney_disease_classifier.constants import *
 import os
-from cnnClassifier.utils.common import read_yaml, create_directories,save_json
-from cnnClassifier.entity.config_entity import DataIngestionConfig
+from kidney_disease_classifier.utils.common import read_yaml, create_directories,save_json
+from kidney_disease_classifier.entity.config_entity import DataIngestionConfig
 
 class ConfigurationManager:
     def __init__(

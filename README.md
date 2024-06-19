@@ -28,3 +28,6 @@
 * Update the dvc.yaml
 * app.py
 
+## Commands
+* kidney-disease-clf\Scripts\activate.bat
+* deactivate

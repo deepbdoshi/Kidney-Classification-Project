@@ -1,0 +1,8 @@
+artifacts_root: data
+
+
+data_ingestion:
+  root_dir: data/images
+  source_URL: https://drive.google.com/drive/folders/1JFbffpl_SZ8vIZYaxdOmodStRg3nJ1ZV/?usp=sharing
+  local_data_file: data/images/data.zip
+  unzip_dir: data/images

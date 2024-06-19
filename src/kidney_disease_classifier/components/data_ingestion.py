@@ -1,9 +1,9 @@
 import os
 import zipfile
 import gdown
-from cnnClassifier import logger
-from cnnClassifier.utils.common import get_size
-from cnnClassifier.entity.config_entity import DataIngestionConfig
+from kidney_disease_classifier import logger
+from kidney_disease_classifier.utils.common import get_size
+from kidney_disease_classifier.entity.config_entity import DataIngestionConfig
 
 
 
@@ -25,6 +25,7 @@ class DataIngestion:
 
             file_id = dataset_url.split("/")[-2]
             prefix = 'https://drive.google.com/uc?/export=download&id='
+            https://drive.google.com/drive/folders/1JFbffpl_SZ8vIZYaxdOmodStRg3nJ1ZV?usp=sharing
             gdown.download(prefix+file_id,zip_download_dir)
 
             logger.info(f"Downloaded data from {dataset_url} into file {zip_download_dir}")
