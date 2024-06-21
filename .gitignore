@@ -3,5 +3,4 @@ src/kidney_disease_classifier.egg-info/
 logs_folder/system_logs.log
 src/kidney_disease_classifier/__pycache__/__init__.cpython-310.pyc
 data/
-data - org/
 *.pyc
