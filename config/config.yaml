@@ -11,3 +11,8 @@ prepare_base_model:
   root_dir: data/prepare_base_model
   base_model_path: data/prepare_base_model/vgg_base_model.h5
   updated_model_path: data/prepare_base_model/vgg_updated_model.h5
+
+
+training:
+  root_dir: data/training
+  trained_model_path: data/training/model.h5
