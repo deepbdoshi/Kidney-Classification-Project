@@ -4,7 +4,8 @@ from kidney_disease_classifier.entity.config_entity import EvaluationConfig
 from kidney_disease_classifier.utils.common import read_yaml, create_directories,save_json
 
 import tensorflow as tf
-
+import mlflow
+import mlflow.keras
 
 class Evaluation:
     def __init__(self, config: EvaluationConfig):
@@ -43,4 +44,16 @@ class Evaluation:
         scores = {"loss": self.score[0], "accuracy": self.score[1]}
         save_json(path = Path("scores.json"), data=scores)
 
+    def log_into_mlflow(self):
+        mlflow.set_registry_uri(self.config.mlflow_uri)
+        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+        
+        with mlflow.start_run():
+            mlflow.log_params(self.config.all_params)
+            mlflow.log_metrics({"loss": self.score[0], "accuracy": self.score[1]})
+
+            if tracking_url_type_store != "file":
+                mlflow.keras.log_model(self.model, "model", registered_model_name="KDC_VGG16")
+            else:
+                mlflow.keras.log_model(self.model, "model")
 
