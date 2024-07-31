@@ -1,6 +1,8 @@
 Setup and AWS Account
-Create the folder structure
-Create the first commit
-Create the requirements file
-Create the logger module
-And cover the next 30 mins
+Complete the training of the model (in colab if not possible on device)
+Fix the data installation path and the path used for acquiring the training data
+
+
+
+
+linear interpolation - https://pippin.gimp.org/image_processing/chap_resampling.html

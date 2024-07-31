@@ -31,3 +31,19 @@
 ## Commands
 * kidney-disease-clf\Scripts\activate.bat
 * deactivate
+
+## ML-Flow Commands
+* set MLFLOW_TRACKING_USERNAME=SUPREME-CODER
+* set MLFLOW_TRACKING_URI=https://dagshub.com/SUPREME-CODER/Kidney-Classification-Project.mlflow
+* set MLFLOW_TRACKING_PASSWORD=Deep@161299
+
+## ML-Flow Code
+```
+import dagshub
+dagshub.init(repo_owner='SUPREME-CODER', repo_name='Kidney-Classification-Project', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)
+```

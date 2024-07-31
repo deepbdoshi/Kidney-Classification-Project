@@ -4,3 +4,5 @@ logs_folder/system_logs.log
 src/kidney_disease_classifier/__pycache__/__init__.cpython-310.pyc
 data/
 *.pyc
+check*
+src/kidney_disease_classifier/components/model_evaluation_mlflow.py
