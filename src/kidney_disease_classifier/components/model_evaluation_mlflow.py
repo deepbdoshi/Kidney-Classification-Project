@@ -1,7 +1,7 @@
 from pathlib import Path
 from urllib.parse import urlparse
 from kidney_disease_classifier.entity.config_entity import EvaluationConfig
-from kidney_disease_classifier.utils.common import read_yaml, create_directories,save_json
+from kidney_disease_classifier.utils.common import read_yaml, create_directories, save_json
 
 import tensorflow as tf
 import mlflow
@@ -32,15 +32,19 @@ class Evaluation:
 
     @staticmethod
     def load_model(path: Path) -> tf.keras.Model:
-        return tf.keras.models.load_model(path)
+        return tf.keras.models.load_model(path, compile=False)
 
     def evaluation(self):
         self.model = self.load_model(self.config.path_of_model)
+        self.model.compile(optimizer=tf.keras.optimizers.SGD(learning_rate=0.01),
+            loss=tf.keras.losses.CategoricalCrossentropy(),
+            metrics=["accuracy"])                              # Fixing the different tf version model saving and loading issue. 
         self._valid_generator()
         self.score = self.model.evaluate(self.valid_generator)
         self.save_score()
 
     def save_score(self):
+        print(self.score)
         scores = {"loss": self.score[0], "accuracy": self.score[1]}
         save_json(path = Path("scores.json"), data=scores)
 

@@ -5,3 +5,4 @@ src/kidney_disease_classifier/__pycache__/__init__.cpython-310.pyc
 data/
 *.pyc
 check*
+mlruns/*
