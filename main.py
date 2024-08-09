@@ -19,16 +19,16 @@ from kidney_disease_classifier.pipeline.stage_04_model_evaluation import Evaluat
 
 
 # 2nd Stage
-# STAGE_NAME = "Base Model Prep Stage"
+STAGE_NAME = "Base Model Prep Stage"
 
-# try:
-#     logger.info(f"####### {STAGE_NAME} has started #######")
-#     objPBMTP = PrepareBaseModelTrainingPipeline()
-#     objPBMTP.main()
-#     logger.info(f"####### {STAGE_NAME} is completed #######\n\n\n")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f"####### {STAGE_NAME} has started #######")
+    objPBMTP = PrepareBaseModelTrainingPipeline()
+    objPBMTP.main()
+    logger.info(f"####### {STAGE_NAME} is completed #######\n\n\n")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
 # 3rd Stage
@@ -44,13 +44,13 @@ from kidney_disease_classifier.pipeline.stage_04_model_evaluation import Evaluat
 #     raise e
 
 # 4th Stage
-STAGE_NAME = "Model Evaluation Stage"
-try:
-    logger.info(f"####### {STAGE_NAME} has started #######")
-    objEP = EvaluationPipeline()
-    objEP.main()
-    logger.info(f"####### {STAGE_NAME} is completed #######\n\n\n")
+# STAGE_NAME = "Model Evaluation Stage"
+# try:
+#     logger.info(f"####### {STAGE_NAME} has started #######")
+#     objEP = EvaluationPipeline()
+#     objEP.main()
+#     logger.info(f"####### {STAGE_NAME} is completed #######\n\n\n")
 
-except Exception as e:
-    logger.exception(e)
-    raise e
+# except Exception as e:
+#     logger.exception(e)
+#     raise e
