@@ -6,3 +6,4 @@ data/
 *.pyc
 check*
 mlruns/*
+dvc dag.PNG
