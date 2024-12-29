@@ -25,17 +25,17 @@ These images are in the form of X-Rays images and are passed through model's arc
 
 ## Project Workflow
 
-* Designed an end to end project for identification of kidney diseases such as stone, tumour and cyst of patients based on the X-RAY images.
-* Experimented with **VGGNet**, **Resnet** models for classification and fine-tuned hyperparameters to optimize their performance.
-* Implemented a DVC pipeline to automate the entire process and integrated MLFlow for tracking of hyper-parameters to get the highest accuracy.
-* The **config.yaml** and **params.yaml** files contain the configurations for all the processes of the entire end to end project pipeline.
-* The Entity object is loaded with the required sections of these configurations.
-* The Configuration manager in src config file handles the above created entity objects and makes them accessible throughout the scope of the projects based on their requirement.
-* The Components specify the various functionalities of the components such as data ingestion, base model preparation, model training and mlflow metrics tracking and model evaluation.
-* The Pipeline objects are responsible for creation of config objects and executing the required components' functionality as a part of the entire pipeline.
-* The **main.py** file executes the entire pipeline from start to end.
-* The **dvc.yaml** file includes the entire commands for executing the entire pipeline without running the previously executed commands.
-* Designed a Flask UI for easy and intuitive access to the user for uploading and diagnosing their X-Ray image.
+* **Developed an end-to-end project** for identifying kidney diseases, including stones, tumors, and cysts, using patients' X-ray images.
+* **Experimented with advanced CNN architectures** like VGGNet and ResNet, fine-tuning hyperparameters to enhance classification performance.
+* **Implemented a DVC pipeline** to automate the workflow, integrating MLFlow for tracking hyperparameters and achieving optimal accuracy.
+* Organized configurations in **config.yaml** and **params.yaml** files, detailing settings for the entire project pipeline.
+* **Entity objects** were created to load relevant configuration sections for modular and reusable code design.
+* A **Configuration Manager** in the `src.config` module handles entity objects, ensuring configurations are accessible across the project.
+* Defined **components** for key functionalities, including data ingestion, base model preparation, model training, metrics tracking, and evaluation.
+* Built **pipeline** objects to manage configuration creation and execute the respective components as part of the project pipeline.
+* The **main.py** file integrates and executes the entire pipeline from start to finish.
+* The **dvc.yaml** file automates pipeline execution, skipping previously completed steps to save time and resources.
+* Designed an intuitive **Flask UI** to allow users to upload X-ray images and receive diagnostic results efficiently.
 
 
 ## Usage
